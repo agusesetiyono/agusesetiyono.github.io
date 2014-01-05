@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ page.title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	
+	{% include navbar.html %}
+
+	{% if page.slug != "halaman_utama" and page.slug != "registrasi" %}
+	{% include step.html %}
+	{% endif %}
+
+  {{ content }}
+
+  <script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<!-- 
+	<script src="js/jquery.steps.min.js"></script>
+
+	<script>
+	  var settings = {
+	    labels: {
+	        current: "Step Sekarang:",
+	        pagination: "Pagination",
+	        finish: "Selesai",
+	        next: "Berikutnya",
+	        previous: "Sebelumnya",
+	        loading: "Loading ..."
+	    },
+	    enableAllSteps: true
+		};
+	  var wizard = $("#wizard").steps(settings);
+	</script>
+	-->
+
+
+</body>
+</html>
