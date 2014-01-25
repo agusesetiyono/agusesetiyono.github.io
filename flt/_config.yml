@@ -1,0 +1,6 @@
+name: FLT
+markdown: redcarpet
+pygments: true
+permalink: pretty
+port: 9001
+exclude: ["FLT Temp"]
