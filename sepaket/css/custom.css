@@ -2,6 +2,13 @@ body {
   min-height: 400px;
   height: 100%;
 }
+a {
+  color: #0072b3;
+  transition: .2s ease all;
+}
+a:hover {
+  color: #00629a;
+}
 .btn {
   transition: 0.2s ease all;
 }
@@ -104,6 +111,55 @@ body {
 .product-list a.thumbnail img {
   width: 150px;
   height: auto;
+}
+.product-detail .well {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: #f9f9f9;
+  border: 1px solid #efefef;
+}
+.product-detail h2.title {
+  margin-top: 0;
+  font-weight: bold;
+}
+.product-detail h3 {
+  margin-top: 0;
+}
+.product-detail .product-price {
+  border: 1px solid #ccc;
+  background: #fff;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+.product-detail .product-price h3 {
+  font-size: 42px;
+  color: #0072b3;
+  text-align: center;
+  font-weight: bold;
+}
+.product-detail .product-price p {
+  text-align: center;
+  margin-bottom: 0;
+}
+.product-detail .product-seller-info {
+  margin-top: 40px;
+}
+.product-detail .product-seller-info p {
+  margin-bottom: 0;
+}
+.product-detail .product-seller-info .rating {
+  color: #ED9D2A;
+}
+.product-review {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.product-review .tab-pane {
+  margin-top: 20px;
 }
 footer {
   background: #101010;
