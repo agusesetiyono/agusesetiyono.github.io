@@ -1,0 +1,119 @@
+body {
+  min-height: 400px;
+  height: 100%;
+}
+.btn {
+  transition: 0.2s ease all;
+}
+.stp-head {
+  padding-bottom: 20px;
+  height: 100%;
+  background-image: url(../img/home-cover.jpg);
+  background-repeat: no-repeat;
+  background-position: 20% center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+.stp-head:before {
+  background: linear-gradient(rgba(0, 114, 179, 0.65) 0%, rgba(0, 114, 179, 0.8) 50%, rgba(0, 114, 179, 0.95) 100%) repeat scroll 0% 0% transparent;
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.stp-head .head-brand {
+  padding-left: 25px;
+  padding-top: 25px;
+}
+.stp-head .head-nav {
+  padding-top: 25px;
+  padding-right: 25px;
+}
+.stp-head .head-intro {
+  padding-top: 100px;
+}
+.stp-head .head-intro h1,
+.stp-head .head-intro h2 {
+  font-size: 42px;
+  color: #fff;
+  padding-left: 25px;
+  font-weight: bold;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.6);
+}
+.stp-head .head-intro h2 {
+  color: #ffff1a;
+  font-size: 24px;
+  font-weight: normal;
+}
+.stp-head .head-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  margin-top: 25px;
+  margin-bottom: 80px;
+  margin-left: 25px;
+  width: auto;
+  display: inline-block;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .head-form {
+    display: block !important;
+  }
+  .head-form .form-control {
+    margin-bottom: 10px;
+  }
+  .head-form .btn {
+    display: block;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.page-product {
+  background-image: none;
+}
+.stp-head-choose {
+  margin: 20px 0;
+}
+.stp-head-choose .tab-pane {
+  margin-top: 20px;
+}
+.product-list thead td {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.product-list .well {
+  background: #f8f8f8;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.product-list .thumbnail {
+  width: 150px;
+}
+.product-list a.thumbnail img {
+  width: 150px;
+  height: auto;
+}
+footer {
+  background: #101010;
+  padding: 80px 0 60px;
+}
+footer a {
+  color: #0072b3;
+  transition: 0.2s ease all;
+}
+footer a:hover {
+  color: #f8f8f8;
+  text-decoration: none;
+}
