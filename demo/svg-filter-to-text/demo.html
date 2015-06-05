@@ -22,9 +22,11 @@
 	    .filtered{
 			filter: url(#filter);
 			-webkit-filter: url(#filter);
-			font-family: 'Oleo Script', Cursive;
-			font-size: 150px;
-			/*font-weight: 900;*/
+			/*font-family: 'Oleo Script', Cursive;*/
+			font-family: 'Open Sans', sans-serif;
+			font-size: 130px;
+			font-weight: 900;
+			letter-spacing: -10px;
 			/*text-transform: uppercase;*/
 	    }
 	    .box{
@@ -55,7 +57,7 @@
 </head>
 <body>
 	<div class="box">
-    	<svg viewbox="-50 -40 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    	<svg viewbox="-50 -160 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
 		<defs>
 			<filter id="filter">
 				<feFlood flood-color="#7A0C0A" result="Color-a" />
@@ -91,21 +93,21 @@
 
 
 				<!-- Make Fat Stroke Outside-->
-				<feMorphology operator="dilate" radius="8" in="Mbuh-3" result="Fat-Stroke-1" />
+				<feMorphology operator="dilate" radius="10" in="Mbuh-3" result="Fat-Stroke-1" />
 				<feComposite operator="in" in="Color-c" in2="Fat-Stroke-1" result="Fat-Stroke-2" />
 				<!-- end -->
 
 
 				
 				<!-- Outer Stroke -->
-				<feMorphology operator="dilate" radius="9" in="Mbuh-2" result="Fat-Stroke-Out-1" />
+				<feMorphology operator="dilate" radius="4" in="Mbuh-2" result="Fat-Stroke-Out-1" />
 				<feComposite operator="in" in="Color-b" in2="Fat-Stroke-Out-1" result="Fat-Stroke-Out-2" />
 				<!-- End -->
 				
 
 
 				<!-- Add Flower BG -->
-				<feImage xlink:href="flower-m.svg" x="0" y="-40"  result="Add-Stripe-1"/>
+				<feImage xlink:href="flower-m.svg" x="0" y="-160"  result="Add-Stripe-1"/>
 	            <feComposite operator="in" in="Add-Stripe-1" in2="Fat-Stroke-2" result="Add-Stripe-3"/>
 	            <!-- End -->
 
@@ -117,7 +119,15 @@
 				<feComposite operator="in" in="Color-d" in2="Inner-Stroke-3" result="Inner-Stroke-4" />
 				<!-- <feOffset dx="4" dy="4" in="Inner-Stroke-4" result="Inner-Stroke-5"/> -->
 				<!-- end -->
-				
+
+
+				<!-- Erote -->
+				<feMorphology operator="erote" radius="3" in="SourceAlpha" result="Erote-1" />
+            	<feComposite operator="in" in="Erote-1" in2="SourceAlpha" result="Erote-2"/>
+           	 	<feComposite operator="in" in="Color-a" in2="Erote-2" result="Erote-3" />
+				<!-- End -->
+
+
 				<feMerge>
 					<!-- <feMergeNode in="Fat-Stroke-Out-2" /> -->
 					<feMergeNode in="Fat-Stroke-2" />
@@ -125,13 +135,14 @@
 					<feMergeNode in="Mbuh-3" />
 					<feMergeNode in="Add-Bg-Color" />
 					<feMergeNode in="Inner-Stroke-4" />
+					<!-- <feMergeNode in="Erote-3" /> -->
 
 				</feMerge>
 			</filter>
 		</defs>
 
 		<g class="filtered">
-			<text x="0" y="120" >Yolo!</text>
+			<text >Yolo!</text>
 		</g>
     </svg>
     </div>
