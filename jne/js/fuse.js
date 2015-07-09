@@ -56,7 +56,7 @@ $(function() {
     createFuse();
   }
 
-  $.getJSON('../json/jakarta.json', function(data) {
+  $.getJSON('http://agusesetiyono.16mb.com/jne/json/jakarta.json', function(data) {
      start(data);
   });
 
