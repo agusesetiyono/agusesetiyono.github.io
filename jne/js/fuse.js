@@ -56,7 +56,7 @@ $(function() {
     createFuse();
   }
 
-  $.getJSON('../json/jakarta.json', function(data) {
+  $.getJSON('../json/example.json', function(data) {
      start(data);
   });
 
