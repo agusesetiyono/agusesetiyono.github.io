@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DEMO</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 	<div class="container yellow angled-bottom-left ">
+		<div class="content">
+			<h1>Give me a title</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo impedit quis nemo.</p>
+		</div>
+	</div> -->
+	<div class="" style="padding-top:100px"></div>
+
+	<div id="container" class="angled-top-left">
+		<div class="content">
+			<h1>Angled Edge</h1>
+			<p>Here is demos for adding angled edge on your site. Change the selectbox to apply on another edge.</p>
+			<select id="selectStyle" onchange="changeStyle()">
+				<option value="angled-top-left">Angle Top Left</option>
+				<option value="angled-top-right">Angle Top Right</option>
+				<option value="angled-bottom-left">Angle Bottom Left</option>
+				<option value="angled-bottom-right">Angle Bottom Right</option>
+				<option value="angled-both-left">Angle Both Left</option>
+				<option value="angled-both-right">Angle Both Right</option>
+				<option value="angled-both-left-right">Angle Both Left Right</option>
+				<option value="angled-both-right-left">Angle Both Right Left</option>
+			</select> 
+		</div>
+	</div>
+
+
+<!-- http://blog.teamtreehouse.com/smarter-sass-mixins-null -->
+
+
+
+<script type="text/javascript">
+	
+	function changeStyle() {
+	    var x = document.getElementById("selectStyle").value;
+	    document.getElementById("container").className = "" + x;
+	}
+</script>
+
+</body>
+</html>

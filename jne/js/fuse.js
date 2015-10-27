@@ -17,7 +17,7 @@ $(function() {
       var r = fuse.search($inputSearch.val());
       $result.empty();
       $.each(r, function() {
-        $result.append('<li class="result-item">' + this.kec + ', <span class="t-kab">' + this.kab + '</span> <span class="t-rp-reg">Rp'+this.reg+'</span></li>');
+        $result.append('<li class="result-item">' + this.kec + ', <span class="t-kab">' + this.kab + '</span> <span class="t-reg">REG: '+this.reg+'</span> <span class="t-yes">YES: '+this.yes+'</span></li>');
       });
     }
 
@@ -56,7 +56,7 @@ $(function() {
     createFuse();
   }
 
-  $.getJSON('../json/example.json', function(data) {
+  $.getJSON('../json/jakarta.json', function(data) {
      start(data);
   });
 

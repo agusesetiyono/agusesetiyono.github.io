@@ -134,7 +134,11 @@ input[type="text"].focus {
     text-transform: uppercase;
     color: #616EA3;
 }
-.t-rp-reg{
+.t-reg{
     color: #FF4B4A;
+    font-weight: bold;
+}
+.t-yes{
+    color: #58B256;
     font-weight: bold;
 }

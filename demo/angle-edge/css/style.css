@@ -1,0 +1,183 @@
+/* Coolors Exported Palette - coolors.co/011627-fdfffc-2ec4b6-e71d36-ff9f1c */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #555; }
+
+#container {
+  height: 400px;
+  width: 100%;
+  position: relative; }
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  width: 25%;
+  padding: 40px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12); }
+  .content h1 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: normal; }
+
+#selectStyle {
+  margin-top: 20px; }
+
+.angled-top-left {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #f1e767 0%, #feb645 100%); }
+  .angled-top-left:before, .angled-top-left:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .angled-top-left:before {
+    top: 0;
+    transform-origin: right top;
+    transform: skewY(3deg); }
+
+.angled-top-right {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #f1e767 0%, #feb645 100%); }
+  .angled-top-right:before, .angled-top-right:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .angled-top-right:before {
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-3deg); }
+
+.angled-bottom-left {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #f1e767 0%, #feb645 100%); }
+  .angled-bottom-left:before, .angled-bottom-left:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .angled-bottom-left:after {
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-3deg); }
+
+.angled-bottom-right {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #f1e767 0%, #feb645 100%); }
+  .angled-bottom-right:before, .angled-bottom-right:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .angled-bottom-right:after {
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(3deg); }
+
+.angled-both-left {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #f1e767 0%, #feb645 100%); }
+  .angled-both-left:before, .angled-both-left:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .angled-both-left:before {
+    top: 0;
+    transform-origin: right top;
+    transform: skewY(3deg); }
+  .angled-both-left:after {
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-3deg); }
+
+.angled-both-right {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #f1e767 0%, #feb645 100%); }
+  .angled-both-right:before, .angled-both-right:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .angled-both-right:before {
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-3deg); }
+  .angled-both-right:after {
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(3deg); }
+
+.angled-both-left-right {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #f1e767 0%, #feb645 100%); }
+  .angled-both-left-right:before, .angled-both-left-right:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .angled-both-left-right:before {
+    top: 0;
+    transform-origin: right top;
+    transform: skewY(3deg); }
+  .angled-both-left-right:after {
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(3deg); }
+
+.angled-both-right-left {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #f1e767 0%, #feb645 100%); }
+  .angled-both-right-left:before, .angled-both-right-left:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .angled-both-right-left:before {
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-3deg); }
+  .angled-both-right-left:after {
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-3deg); }
