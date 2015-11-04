@@ -6,16 +6,16 @@ body {
   height: 400px;
   display: block;
   background-color: #efefef;
-  background-image: url("../nz.png"), url("../nz2.svg"), linear-gradient(to right, transparent 0%, transparent 20%, #00FAFF 41%, #00FF8A 60%, transparent 81%, transparent 100%);
-  background-size: 60%, 100%, 50% 50%;
+  background-image: url(""), url("../nz2.svg"), linear-gradient(45deg, transparent 0%, transparent 20%, #FFEE00 41%, #FF00CE 60%, transparent 81%, transparent 100%);
+  background-size: contain, 100%, 200%;
   background-position: 0 0, 0 0, 0 100%;
   animation: move 10s linear infinite;
-  position: relative; }
+  position: relative;
+  background-repeat: no-repeat, repeat, repeat; }
 
 .content {
   position: relative;
   padding: 40px;
-  background-color: transparent;
   text-align: center;
   width: 40%;
   margin: 0 auto;
@@ -27,6 +27,6 @@ body {
 
 @keyframes move {
   0% {
-    background-position: 0 0, 0 60%, 0 50%; }
+    background-position: 0 0, 0 0, 0 0%; }
   100% {
-    background-position: 0 0, 0 60%, 100% 50%; } }
+    background-position: 0 0, 0 0, 200% 0%; } }

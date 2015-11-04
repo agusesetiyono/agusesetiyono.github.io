@@ -11,24 +11,21 @@ body{
 	// background-image: url("../nzx.svg"),  
 	// 				  radial-gradient(200px 500px at center, #00FAFF 0%, #00FF8A 50%, rgba(0,0,0,0));
 	// background-image: radial-gradient(200px 500px at center, #00FAFF 0%, #00FF8A 50%, rgba(0,0,0,0));
-	background-image: url("../nz.png"), url("../nz2.svg"),  
-	linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, #00FAFF 41%, #00FF8A 60%, rgba(0,0,0,0) 81%, rgba(0,0,0,0) 100%);
+	// background-image: url("../nz.png"), url("../nz2.svg"),  
+	background-image: url(""), url("../nz2.svg"),  
+	linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, #FFEE00 41%, #FF00CE 60%, rgba(0,0,0,0) 81%, rgba(0,0,0,0) 100%);
 	
-	// background-size: 50%;
-	// background-position: 0 100%;
-	// background-position: 10% 10%;
-	background-size: 60%, 100%, 50% 50%;
-	background-position:0 0, 0 0, 0 100%;
-	// background-position: 0 100%;
-	// background-repeat: no-repeat;
 
+	background-size: contain, 100%, 200%;
+	background-position:0 0, 0 0, 0 100%;
 	animation: move 10s linear infinite;
 	position: relative;
+	background-repeat: no-repeat, repeat, repeat;
 }
 .content{
 	position: relative;
 	padding: 40px;
-	background-color: rgba(#000, 0);
+	// background-color: #f8f8f8;
 	text-align: center;
 	width: 40%;
 	margin: 0 auto;
@@ -42,11 +39,11 @@ body{
 
 @keyframes move {
 	0% { 
-		background-position: 0 0, 0 60%, 0 50%;
+		background-position: 0 0, 0 0, 0 0%;
 		// background-position: 0 50%;
 	}
 	100% { 
-	  background-position: 0 0, 0 60%, 100% 50%;
+	  background-position: 0 0, 0 0, 200% 0%;
 	  // background-position: 100% 50%;
 	}
 }
