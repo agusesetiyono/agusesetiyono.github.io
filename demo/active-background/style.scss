@@ -1,6 +1,4 @@
-body{
-	margin: 0;
-}
+@import "normalize";
 
 .block{
 	width: 100%;
@@ -29,36 +27,25 @@ body{
 	// background-image: url("../single-01.svg");
 	background-image: linear-gradient(-45deg,  rgba(0,0,0,0) 40%, rgba(#FFEE00, .8) 45%, rgba(#FF00CE, .8) 55%, rgba(0,0,0,0) 60%);
 	background-color: #f1f1f1;
-	 // -webkit-mask-image: url("../single-01.svg");
-  //   mask-image: url("../single-01.svg");
-  	// clip-path: url("../single-01.svg");
-  	// clip-path: url(#myClip);
+
 
 	background-size: 200%;
 	position: relative;
 	animation: go2 10s linear infinite;
 
-	-webkit-clip-path: url(#svgClip);
-	clip-path: url(#svgClip);
-}
+	// -webkit-clip-path: url(#svgClip);
+	// clip-path: url(#svgClip);
 
+	 -webkit-clip-path: url(home-app-2.svg);
+	clip-path: url(home-app-2.svg#svgClip);
 
-.add-clip{
-	// -webkit-clip-path: polygon("50% 0%, 0% 100%, 100% 100%");
-	// clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-
-
-	/*Chrome,Safari*/
--webkit-clip-path: url(#svgClip);
-
-/* Firefox*/
-clip-path: url(#svgClip);
-
-/* iOS support */
- // -webkit-mask: url(home-app-2.svg);
-
+	/* iOS support */
+ 	// -webkit-mask: url(home-app-2.svg);
 
 }
+
+
+
 
 
 .ada{
