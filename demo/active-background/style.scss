@@ -13,7 +13,7 @@ body{
 	// background-image: radial-gradient(200px 500px at center, #00FAFF 0%, #00FF8A 50%, rgba(0,0,0,0));
 	// background-image: url("../nz.png"), url("../nz2.svg"),  
 	background-image: url(""), url("../home-app.svg"),  
-	linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(#FFEE00, .2) 45%, rgba(#FF00CE, .2) 55%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%);
+	linear-gradient(45deg,  rgba(0,0,0,0) 40%, rgba(#FFEE00, .8) 45%, rgba(#FF00CE, .8) 55%, rgba(0,0,0,0) 60%);
 	
 
 	background-size: contain, contain, 200%;
@@ -22,15 +22,65 @@ body{
 	position: relative;
 	background-repeat: no-repeat, repeat, repeat;
 }
-.content{
+.block-demo-2{
+	width: 100%;
+	height: 400px;
+	display: block;
+	// background-image: url("../single-01.svg");
+	background-image: linear-gradient(-45deg,  rgba(0,0,0,0) 40%, rgba(#FFEE00, .8) 45%, rgba(#FF00CE, .8) 55%, rgba(0,0,0,0) 60%);
+	background-color: #f1f1f1;
+	 // -webkit-mask-image: url("../single-01.svg");
+  //   mask-image: url("../single-01.svg");
+  	// clip-path: url("../single-01.svg");
+  	// clip-path: url(#myClip);
+
+	background-size: 200%;
 	position: relative;
+	animation: go2 10s linear infinite;
+
+	-webkit-clip-path: url(#svgClip);
+	clip-path: url(#svgClip);
+}
+
+
+.add-clip{
+	// -webkit-clip-path: polygon("50% 0%, 0% 100%, 100% 100%");
+	// clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+
+	/*Chrome,Safari*/
+-webkit-clip-path: url(#svgClip);
+
+/* Firefox*/
+clip-path: url(#svgClip);
+
+/* iOS support */
+ // -webkit-mask: url(home-app-2.svg);
+
+
+}
+
+
+.ada{
+	width: 200px;
+	height: 200px;
+	display: block;
+	background-color: red;
+	-webkit-clip-path: url(#myClip);
+	clip-path: url(#myClip);
+}
+
+.content{
+
+	position: absolute;
 	padding: 40px;
-	// background-color: rgba(#fff, .8);
+	background-color: rgba(#ddd, .8);
 	text-align: center;
 	width: 40%;
-	margin: 0 auto;
+	// margin: 0 auto;
 	top: 50%;
-	transform: translateY(-50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
 	color: rgba(#000, .6);
 	h1,p{
 		font-family: Open Sans, sans-serif;
@@ -51,3 +101,17 @@ body{
 	  // background-position: 100% 50%;
 	}
 }
+
+@keyframes go2 {
+	0% { 
+		background-position:  0 0%;
+		
+	}
+	100% { 
+	  background-position: 200% 0%;
+
+	}
+}
+
+
+
