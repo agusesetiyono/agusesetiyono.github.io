@@ -361,7 +361,7 @@ th {
   height: 400px;
   display: block;
   background-color: #efefef;
-  background-image: url(""), url("../home-app.svg"), linear-gradient(45deg, transparent 40%, rgba(255, 238, 0, 0.8) 45%, rgba(255, 0, 206, 0.8) 55%, transparent 60%);
+  background-image: url(""), url("home-app.svg"), linear-gradient(45deg, transparent 40%, rgba(255, 238, 0, 0.8) 45%, rgba(255, 0, 206, 0.8) 55%, transparent 60%);
   background-size: contain, contain, 200%;
   background-position: 0 0, 0 0, 0 100%;
   animation: go 20s linear infinite;
