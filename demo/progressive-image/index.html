@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <head>
+        <title>AntiModerate Demo</title>
+        <style>
+        img.antimoderate {
+            display:inline-block;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>AntiModerate</h1>
+
+
+        <img style="width:800px; height:576px;" src="https://pixabay.com/static/uploads/photo/2015/11/28/21/44/business-1067978_960_720.jpg" class="antimoderate" data-antimoderate-idata="img-small-1.jpg" alt=""> 
+
+        <img style="width:800px; height:576px;" src="http://tfirdaus.github.io/blur-image-load/img/img-large-1.jpeg" class="antimoderate" data-antimoderate-idata="img-small-2.jpg" alt="">
+
+
+
+        <script src="antimoderate.js"></script>
+        <script>
+            var antimoderate_images = document.querySelectorAll('.antimoderate');
+
+            for(var i=0; i<antimoderate_images.length; ++i) {
+                var img = antimoderate_images[i];
+                AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"), img.getAttribute("data-antimoderate-scale"));
+            }
+        </script>
+    </body>
+</html>
