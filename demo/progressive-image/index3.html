@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Onscreen Visibility Plugin</title>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript" src="jquery.visible.js"></script>
+	<script type="text/javascript" src="stackblur.js"></script>
+	
+	<style>
+		#container{
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		figure{
+			position: relative;
+			margin: 0;
+		}
+		figure img{
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+		canvas {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100% !important;
+		    height: 100% !important;
+		    z-index: 2;
+		}
+	</style>
+	
+
+
+</head>
+<body>
+
+	<div id="container">
+		<figure>
+			<img id="img" data-other-src="http://tfirdaus.github.io/blur-image-load/img/img-large-1.jpeg" src="img-small-1.jpg" width="800" >
+			<canvas id="canvas"></canvas>
+		</figure>
+		<br>
+
+		<figure>
+			<img id="img" data-other-src="http://tfirdaus.github.io/blur-image-load/img/img-large-2.jpeg" src="img-small-2.jpg" width="800">
+			<canvas id="canvas"></canvas>
+		</figure>
+		<br>
+
+		<figure>
+			<img id="img" data-other-src="http://tfirdaus.github.io/blur-image-load/img/img-large-3.jpeg" src="img-small-3.jpg" width="800" >
+			<canvas id="canvas"></canvas>
+		</figure>
+		<br>
+
+		<figure>
+			<img id="img" data-other-src="http://tfirdaus.github.io/blur-image-load/img/img-large-4.jpeg" src="img-small-4.jpg" width="800">
+			<canvas id="canvas"></canvas>
+		</figure>
+		<br>
+
+		<figure>
+			<img id="img" data-other-src="http://tfirdaus.github.io/blur-image-load/img/img-large-5.jpeg" src="img-small-5.jpg" width="800" >
+			<canvas id="canvas"></canvas>
+		</figure>
+		<br>
+
+		<figure>
+			<img id="img" data-other-src="http://tfirdaus.github.io/blur-image-load/img/img-large-6.jpeg" src="img-small-6.jpg" width="800">
+			<canvas id="canvas"></canvas>
+		</figure>
+		<br>
+
+
+	
+		
+
+	</div>
+	
+
+	<script type="text/javascript">
+
+		$(function(){
+			$(window).scroll(function(){
+
+				// var detectPartial = 'partial';
+				
+
+				$('img').each(function(){
+					if( $(this).visible() == true) {
+						var canvas = document.getElementById("canvas");
+						var img = document.getElementById("img");
+						StackBlur.image(img, canvas, 4, false);
+						$(this).prop('src',$(this).attr('data-other-src'));
+					}
+				});
+			});
+
+				
+		});
+	</script>
+
+</body>
+</html>
