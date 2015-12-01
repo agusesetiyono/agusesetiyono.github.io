@@ -84,16 +84,25 @@
 	<script type="text/javascript">
 
 		$(function(){
+			var canvas = document.getElementById("canvas");
+			var img = document.getElementById("img");
+			StackBlur.image(img, canvas, 5, false);			
+			// $('img').each(function(){
+
+			// 	StackBlur.image($('img'), canvas, 5, false);
+			// });
+
+			
+			
 			$(window).scroll(function(){
 
 				// var detectPartial = 'partial';
 				
 
 				$('img').each(function(){
+					
+
 					if( $(this).visible() == true) {
-						var canvas = document.getElementById("canvas");
-						var img = document.getElementById("img");
-						StackBlur.image(img, canvas, 4, false);
 						$(this).prop('src',$(this).attr('data-other-src'));
 					}
 				});

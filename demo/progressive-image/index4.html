@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Onscreen Visibility Plugin</title>
+
+	<style>
+		img.antimoderate {
+            display:inline-block;
+        }
+        #container{
+        	max-width: 800px;
+        	margin: 0 auto;
+        }
+	</style>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript" src="jquery.visible.js"></script>
+	<script src="antimoderate.js"></script>
+	
+
+	<script type="text/javascript">
+
+		$(function(){
+
+			var antimoderate_images = document.querySelectorAll('.antimoderate');
+
+			for(var i=0; i<antimoderate_images.length; ++i) {
+				var img = antimoderate_images[i];
+				AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"), img.getAttribute("data-antimoderate-scale"));
+			}
+
+
+				// Add the spans to the container element.
+				// $('#container dt').each(function(){ $(this).append('<span></span>'); });
+				
+				$(window).scroll(function(){
+					var detectPartial = 'partial';
+
+					$('img').each(function(){
+
+						if( $(this).visible(detectPartial) == true) {
+							$(this).prop('src',$(this).attr('data-img-large'));
+
+						}
+					});
+
+
+				});
+				
+
+
+			});
+	</script>
+
+</head>
+<body>
+
+	<div id="container">
+		
+		<img style="width:800px; height:576px;" class="antimoderate" data-antimoderate-scale="1" data-antimoderate-idata="img-small-1.jpg" data-img-large="http://tfirdaus.github.io/blur-image-load/img/img-large-1.jpeg"><br>
+
+		<img style="width:800px; height:576px;" class="antimoderate" data-antimoderate-scale="1" data-antimoderate-idata="img-small-2.jpg" data-img-large="http://tfirdaus.github.io/blur-image-load/img/img-large-2.jpeg"><br>	
+
+		<img style="width:800px; height:576px;" class="antimoderate" data-antimoderate-scale="1" data-antimoderate-idata="img-small-3.jpg" data-img-large="http://tfirdaus.github.io/blur-image-load/img/img-large-3.jpeg"><br>
+
+		<img style="width:800px; height:576px;" class="antimoderate" data-antimoderate-scale="1" data-antimoderate-idata="img-small-4.jpg" data-img-large="http://tfirdaus.github.io/blur-image-load/img/img-large-4.jpeg"><br>
+
+		<img style="width:800px; height:576px;" class="antimoderate" data-antimoderate-scale="1" data-antimoderate-idata="img-small-5.jpg" data-img-large="http://tfirdaus.github.io/blur-image-load/img/img-large-5.jpeg"><br>	
+
+		<img style="width:800px; height:576px;" class="antimoderate" data-antimoderate-scale="1" data-antimoderate-idata="img-small-6.jpg" data-img-large="http://tfirdaus.github.io/blur-image-load/img/img-large-6.jpeg"><br>			  
+
+	</div>
+
+
+</body>
+</html>
