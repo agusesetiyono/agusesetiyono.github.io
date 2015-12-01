@@ -31,15 +31,13 @@
 			}
 
 
-				// Add the spans to the container element.
-				// $('#container dt').each(function(){ $(this).append('<span></span>'); });
 				
 				$(window).scroll(function(){
 					var detectPartial = 'partial';
 
 					$('img').each(function(){
 
-						if( $(this).visible(detectPartial) == true) {
+						if( $(this).visible() == true) {
 							$(this).prop('src',$(this).attr('data-img-large'));
 
 						}
