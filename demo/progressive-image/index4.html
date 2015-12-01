@@ -3,59 +3,14 @@
 <head>
 	<title>jQuery Onscreen Visibility Plugin</title>
 
-	<style>
-		img.antimoderate {
-            display:inline-block;
-        }
-        #container{
-        	max-width: 800px;
-        	margin: 0 auto;
-        }
-	</style>
-
-	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-
-	<script type="text/javascript" src="jquery.visible.js"></script>
-	<script src="antimoderate.js"></script>
+	<link rel="stylesheet" href="css/style.css">
 	
-
-	<script type="text/javascript">
-
-		$(function(){
-
-			var antimoderate_images = document.querySelectorAll('.antimoderate');
-
-			for(var i=0; i<antimoderate_images.length; ++i) {
-				var img = antimoderate_images[i];
-				AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"), img.getAttribute("data-antimoderate-scale"));
-			}
-
-
-				
-				$(window).scroll(function(){
-					var detectPartial = 'partial';
-
-					$('img').each(function(){
-
-						if( $(this).visible() == true) {
-							$(this).prop('src',$(this).attr('data-img-large'));
-
-						}
-					});
-
-
-				});
-				
-
-
-			});
-	</script>
 
 </head>
 <body>
 
 	<div id="container">
-		
+	
 		<img style="width:800px; height:576px;" class="antimoderate" data-antimoderate-scale="1" data-antimoderate-idata="img-small-1.jpg" data-img-large="http://tfirdaus.github.io/blur-image-load/img/img-large-1.jpeg"><br>
 
 		<img style="width:800px; height:576px;" class="antimoderate" data-antimoderate-scale="1" data-antimoderate-idata="img-small-2.jpg" data-img-large="http://tfirdaus.github.io/blur-image-load/img/img-large-2.jpeg"><br>	
@@ -71,5 +26,38 @@
 	</div>
 
 
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.visible.js"></script>
+	<script src="antimoderate.js"></script>
+	<script type="text/javascript">
+
+		$(function(){
+
+			var antimoderate_images = document.querySelectorAll('.antimoderate');
+
+			for(var i=0; i<antimoderate_images.length; ++i) {
+				var img = antimoderate_images[i];
+				AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"), img.getAttribute("data-antimoderate-scale"));
+			}
+
+
+				
+			$(window).scroll(function(){
+				var detectPartial = 'partial';
+
+				$('img').each(function(){
+
+					if( $(this).visible(detectPartial) == true) {
+						$(this).prop('src',$(this).attr('data-img-large'));
+
+					}
+				});
+
+
+			});
+				
+		});
+	</script>
 </body>
 </html>
