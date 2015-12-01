@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
 
-        <title>AntiModerate Demo</title>
+        <title>AntiModerate Demoa</title>
 
         <style>
         img.antimoderate {
@@ -13,11 +13,13 @@
     </head>
     <body>
         <h1>AntiModerate Demo</h1>
+        <p id="result"></p>
+        <br>
 
 
-        <img style="width:900px; height:600px;" src="http://tfirdaus.github.io/blur-image-load/img/img-large-1.jpeg" class="antimoderate" data-antimoderate-idata="img-small-1.jpg" alt=""> 
+        <!-- <img style="width:900px; height:600px;" src="img-large-1.jpg" class="antimoderate" data-antimoderate-idata="img-small-1.jpg" alt="">  -->
 
-        <img style="width:900px; height:600px;" src="http://tfirdaus.github.io/blur-image-load/img/img-large-2.jpeg" class="antimoderate" data-antimoderate-idata="img-small-2.jpg" alt=""> 
+        <img style="width:900px; height:600px;" src="img-large-2.jpg" class="antimoderate" data-antimoderate-idata="img-small-2.jpg" alt=""> 
 
         <img style="width:900px; height:600px;" src="http://tfirdaus.github.io/blur-image-load/img/img-large-3.jpeg" class="antimoderate" data-antimoderate-idata="img-small-3.jpg" alt=""> 
 
@@ -27,16 +29,32 @@
 
         <img style="width:900px; height:600px;" src="http://tfirdaus.github.io/blur-image-load/img/img-large-6.jpeg" class="antimoderate" data-antimoderate-idata="img-small-6.jpg" alt=""> 
 
-
-
+        <!--  
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="jquery.visible.js"></script>
+        -->
         <script src="antimoderate.js"></script>
         <script>
             var antimoderate_images = document.querySelectorAll('.antimoderate');
+         
 
+           
             for(var i=0; i<antimoderate_images.length; ++i) {
                 var img = antimoderate_images[i];
+
+                
+
                 AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"), img.getAttribute("data-antimoderate-scale"));
+
+
+
+                
             }
+
+
+
+            
+      
         </script>
     </body>
 </html>

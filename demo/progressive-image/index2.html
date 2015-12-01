@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Onscreen Visibility Plugin</title>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript" src="jquery.visible.js"></script>
+
+	<script src="antimoderate.js"></script>
+
+	<script type="text/javascript">
+
+		$(function(){
+
+
+				// Add the spans to the container element.
+				
+				$(window).scroll(function(){
+
+					var detectPartial = 'partial';
+					
+					
+					$('img').each(function(){
+						if( $(this).visible( detectPartial ) == true) {
+							// $(this).prop('src',$(this).attr('data-other-src'));
+							// alert($(this).attr('data-other-src'));
+
+							 AntiModerate.process($(this), $(this).attr("data-antimoderate-idata"), $(this).attr("data-antimoderate-scale"));
+						}
+					});
+
+
+				});
+				
+
+
+			});
+	</script>
+
+</head>
+<body>
+
+	<div id="container">
+		<img src="img-large-1.jpg" data-antimoderate-idata="img-small-1.jpg" width="800" ><br>
+		<img src="img-large-2.jpg" data-antimoderate-idata="img-small-2.jpg" width="800"><br>
+		<!-- <img data-other-src="img/img-large-3.jpeg" src="img/img-small-3.jpg" width="800"><br>
+		<img data-other-src="img/img-large-4.jpeg" src="img/img-small-4.jpg" width="800"><br>
+		<img data-other-src="img/img-large-5.jpeg" src="img/img-small-5.jpg" width="800"><br>
+		<img data-other-src="img/img-large-6.jpeg" src="img/img-small-6.jpg" width="800"> -->
+		
+
+	</div>
+
+
+</body>
+</html>
